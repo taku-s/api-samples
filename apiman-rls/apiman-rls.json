@@ -10,8 +10,8 @@
             "email": "apiman@redhat.com"
         },
         "license": {
-            "name": "Apache 2",
-            "url": "http://www.apache.org/licenses/LICENSE-2.0"
+            "name": "Apache 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0"
         },
         "version": "1.0.0"
     },
