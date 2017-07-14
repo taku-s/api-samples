@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Rate Limiter API",
-    "description": "A REST API used by clients to access the standalone Rate Limiter micro-service.",
+    "description": "A REST API used by clients to access the standalone Rate Limiter micro-service...",
     "termsOfService": "http://swagger.io/terms/",
     "contact": {
       "name": "Apiman Open Source Project",
