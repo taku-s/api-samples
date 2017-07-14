@@ -216,7 +216,8 @@
         {
           "name": "limitId",
           "in": "path",
-          "required": true
+          "required": true,
+          "type": "string"
         }
       ]
     }
