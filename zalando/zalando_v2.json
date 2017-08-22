@@ -1,0 +1,3747 @@
+{
+   "swagger": "2.0",
+   "info": {
+      "version": "v1.0",
+      "title": "Zalando Shop API",
+      "description": "The shop API empowers developers to build amazing new apps or websites using Zalando shop data and services."
+   },
+   "host": "api.zalando.com",
+   "schemes": [
+      "https"
+   ],
+   "basePath": "/",
+   "produces": [
+      "application/json"
+   ],
+   "paths": {
+      "/articles": {
+         "get": {
+            "tags": [
+               "articles"
+            ],
+            "summary": "Search for Articles",
+            "description": "Search for articles based on various different possible filter like e.g. the `brandFamily`, the `catagory` or a\nspecific `color`. See [Filters](https://todo) for a list of all available filter options.\n\nThe default `pageSize` for responses is set to `20`. You can add a `pageSize` request parameter to adjust that.\nPlease keep in mind that the maximum `pageSize` for this resource is `200`.\n\nThe endpoint also supports reducing the fields returned for each article via the `fields` parameter. Please\nrefer to [fields parameter](https://todo) for more details.",
+            "responses": {
+               "200": {
+                  "description": "Articles response.",
+                  "schema": {
+                     "$ref": "#/definitions/Articles"
+                  },
+                  "examples": {
+                     "application/json": {
+                        "content": [
+                           {
+                              "id": "BE824G002-C11",
+                              "modelId": "BE824G002",
+                              "name": "Long sleeved top - stormy weather",
+                              "shopUrl": "https://www.zalando.co.uk/bellybutton-long-sleeved-top-grey-be824g002-c11.html",
+                              "color": "Grey",
+                              "available": false,
+                              "season": "SUMMER",
+                              "seasonYear": "2015",
+                              "activationDate": "2015-01-12T17:12:15+01:00",
+                              "additionalInfos": [],
+                              "genders": [
+                                 "MALE"
+                              ],
+                              "ageGroups": [
+                                 "BABY"
+                              ],
+                              "brand": {
+                                 "key": "BE8",
+                                 "name": "bellybutton",
+                                 "logoUrl": "https://i2.ztat.net/brand/belly-button-1.jpg",
+                                 "logoLargeUrl": "https://i2.ztat.net/brandxl/belly-button-1.jpg",
+                                 "shopUrl": "https://www.zalando.co.uk/belly-button"
+                              },
+                              "categoryKeys": [
+                                 "catalog",
+                                 "kids",
+                                 "childrens-clothing",
+                                 "kids-clothing-shirts-tops",
+                                 "kids-clothing-long-sleeve-tops",
+                                 "all",
+                                 "clothing"
+                              ],
+                              "attributes": [
+                                 {
+                                    "name": "Total length",
+                                    "values": [
+                                       "10.0 \" (Size 50)"
+                                    ]
+                                 },
+                                 {
+                                    "name": "Fabric",
+                                    "values": [
+                                       "Jersey"
+                                    ]
+                                 },
+                                 {
+                                    "name": "Length",
+                                    "values": [
+                                       "Standard"
+                                    ]
+                                 },
+                                 {
+                                    "name": "Pattern",
+                                    "values": [
+                                       "Print"
+                                    ]
+                                 },
+                                 {
+                                    "name": "Fit",
+                                    "values": [
+                                       "normal"
+                                    ]
+                                 },
+                                 {
+                                    "name": "Occasion",
+                                    "values": [
+                                       "Leisure"
+                                    ]
+                                 },
+                                 {
+                                    "name": "Neckline",
+                                    "values": [
+                                       "Envelope"
+                                    ]
+                                 },
+                                 {
+                                    "name": "sleeve length",
+                                    "values": [
+                                       "8.0 \" (Size 50)"
+                                    ]
+                                 },
+                                 {
+                                    "name": "outer fabric material",
+                                    "values": [
+                                       "100% cotton"
+                                    ]
+                                 },
+                                 {
+                                    "name": "Sleeve length",
+                                    "values": [
+                                       "Long sleeve"
+                                    ]
+                                 }
+                              ],
+                              "units": [
+                                 {
+                                    "id": "BE824G002-C110068000",
+                                    "size": "4-6m",
+                                    "price": {
+                                       "currency": "GBP",
+                                       "value": 11,
+                                       "formatted": "£11.00"
+                                    },
+                                    "originalPrice": {
+                                       "currency": "GBP",
+                                       "value": 11,
+                                       "formatted": "£11.00"
+                                    },
+                                    "available": false,
+                                    "stock": 0
+                                 },
+                                 {
+                                    "id": "BE824G002-C110062000",
+                                    "size": "2-4m",
+                                    "price": {
+                                       "currency": "GBP",
+                                       "value": 11,
+                                       "formatted": "£11.00"
+                                    },
+                                    "originalPrice": {
+                                       "currency": "GBP",
+                                       "value": 11,
+                                       "formatted": "£11.00"
+                                    },
+                                    "available": false,
+                                    "stock": 0
+                                 },
+                                 {
+                                    "id": "BE824G002-C110074000",
+                                    "size": "6-9m",
+                                    "price": {
+                                       "currency": "GBP",
+                                       "value": 11,
+                                       "formatted": "£11.00"
+                                    },
+                                    "originalPrice": {
+                                       "currency": "GBP",
+                                       "value": 11,
+                                       "formatted": "£11.00"
+                                    },
+                                    "available": false,
+                                    "stock": 0
+                                 },
+                                 {
+                                    "id": "BE824G002-C110050000",
+                                    "size": "1m",
+                                    "price": {
+                                       "currency": "GBP",
+                                       "value": 11,
+                                       "formatted": "£11.00"
+                                    },
+                                    "originalPrice": {
+                                       "currency": "GBP",
+                                       "value": 11,
+                                       "formatted": "£11.00"
+                                    },
+                                    "available": false,
+                                    "stock": 0
+                                 },
+                                 {
+                                    "id": "BE824G002-C110056000",
+                                    "size": "2m",
+                                    "price": {
+                                       "currency": "GBP",
+                                       "value": 11,
+                                       "formatted": "£11.00"
+                                    },
+                                    "originalPrice": {
+                                       "currency": "GBP",
+                                       "value": 11,
+                                       "formatted": "£11.00"
+                                    },
+                                    "available": false,
+                                    "stock": 0
+                                 }
+                              ],
+                              "media": {
+                                 "images": [
+                                    {
+                                       "orderNumber": 1,
+                                       "type": "NON_MODEL",
+                                       "thumbnailHdUrl": "https://i2.ztat.net/thumb_hd/BE/82/4G/00/2C/11/BE824G002-C11@8.jpg",
+                                       "smallUrl": "https://i2.ztat.net/catalog/BE/82/4G/00/2C/11/BE824G002-C11@8.jpg",
+                                       "smallHdUrl": "https://i2.ztat.net/catalog_hd/BE/82/4G/00/2C/11/BE824G002-C11@8.jpg",
+                                       "mediumUrl": "https://i2.ztat.net/detail/BE/82/4G/00/2C/11/BE824G002-C11@8.jpg",
+                                       "mediumHdUrl": "https://i2.ztat.net/detail_hd/BE/82/4G/00/2C/11/BE824G002-C11@8.jpg",
+                                       "largeUrl": "https://i2.ztat.net/large/BE/82/4G/00/2C/11/BE824G002-C11@8.jpg",
+                                       "largeHdUrl": "https://i2.ztat.net/large_hd/BE/82/4G/00/2C/11/BE824G002-C11@8.jpg"
+                                    },
+                                    {
+                                       "orderNumber": 2,
+                                       "type": "NON_MODEL",
+                                       "thumbnailHdUrl": "https://i1.ztat.net/thumb_hd/BE/82/4G/00/2C/11/BE824G002-C11@7.jpg",
+                                       "smallUrl": "https://i1.ztat.net/catalog/BE/82/4G/00/2C/11/BE824G002-C11@7.jpg",
+                                       "smallHdUrl": "https://i1.ztat.net/catalog_hd/BE/82/4G/00/2C/11/BE824G002-C11@7.jpg",
+                                       "mediumUrl": "https://i1.ztat.net/detail/BE/82/4G/00/2C/11/BE824G002-C11@7.jpg",
+                                       "mediumHdUrl": "https://i1.ztat.net/detail_hd/BE/82/4G/00/2C/11/BE824G002-C11@7.jpg",
+                                       "largeUrl": "https://i1.ztat.net/large/BE/82/4G/00/2C/11/BE824G002-C11@7.jpg",
+                                       "largeHdUrl": "https://i1.ztat.net/large_hd/BE/82/4G/00/2C/11/BE824G002-C11@7.jpg"
+                                    },
+                                    {
+                                       "orderNumber": 3,
+                                       "type": "NON_MODEL",
+                                       "thumbnailHdUrl": "https://i2.ztat.net/thumb_hd/BE/82/4G/00/2C/11/BE824G002-C11@6.jpg",
+                                       "smallUrl": "https://i2.ztat.net/catalog/BE/82/4G/00/2C/11/BE824G002-C11@6.jpg",
+                                       "smallHdUrl": "https://i2.ztat.net/catalog_hd/BE/82/4G/00/2C/11/BE824G002-C11@6.jpg",
+                                       "mediumUrl": "https://i2.ztat.net/detail/BE/82/4G/00/2C/11/BE824G002-C11@6.jpg",
+                                       "mediumHdUrl": "https://i2.ztat.net/detail_hd/BE/82/4G/00/2C/11/BE824G002-C11@6.jpg",
+                                       "largeUrl": "https://i2.ztat.net/large/BE/82/4G/00/2C/11/BE824G002-C11@6.jpg",
+                                       "largeHdUrl": "https://i2.ztat.net/large_hd/BE/82/4G/00/2C/11/BE824G002-C11@6.jpg"
+                                    },
+                                    {
+                                       "orderNumber": 4,
+                                       "type": "NON_MODEL",
+                                       "thumbnailHdUrl": "https://i3.ztat.net/thumb_hd/BE/82/4G/00/2C/11/BE824G002-C11@5.jpg",
+                                       "smallUrl": "https://i3.ztat.net/catalog/BE/82/4G/00/2C/11/BE824G002-C11@5.jpg",
+                                       "smallHdUrl": "https://i3.ztat.net/catalog_hd/BE/82/4G/00/2C/11/BE824G002-C11@5.jpg",
+                                       "mediumUrl": "https://i3.ztat.net/detail/BE/82/4G/00/2C/11/BE824G002-C11@5.jpg",
+                                       "mediumHdUrl": "https://i3.ztat.net/detail_hd/BE/82/4G/00/2C/11/BE824G002-C11@5.jpg",
+                                       "largeUrl": "https://i3.ztat.net/large/BE/82/4G/00/2C/11/BE824G002-C11@5.jpg",
+                                       "largeHdUrl": "https://i3.ztat.net/large_hd/BE/82/4G/00/2C/11/BE824G002-C11@5.jpg"
+                                    }
+                                 ]
+                              }
+                           }
+                        ]
+                     }
+                  }
+               },
+               "400": {
+                  "description": "Bad request.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               },
+               "404": {
+                  "description": "Not found.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "$ref": "#/parameters/articleId"
+               },
+               {
+                  "$ref": "#/parameters/articleModelId"
+               },
+               {
+                  "$ref": "#/parameters/articleUnitId"
+               },
+               {
+                  "$ref": "#/parameters/activationDate"
+               },
+               {
+                  "$ref": "#/parameters/ageGroup"
+               },
+               {
+                  "$ref": "#/parameters/assortmentArea"
+               },
+               {
+                  "$ref": "#/parameters/brand"
+               },
+               {
+                  "$ref": "#/parameters/brandfamily"
+               },
+               {
+                  "$ref": "#/parameters/category"
+               },
+               {
+                  "$ref": "#/parameters/color"
+               },
+               {
+                  "$ref": "#/parameters/den"
+               },
+               {
+                  "$ref": "#/parameters/filling"
+               },
+               {
+                  "$ref": "#/parameters/fullText"
+               },
+               {
+                  "$ref": "#/parameters/gender"
+               },
+               {
+                  "$ref": "#/parameters/heelForm"
+               },
+               {
+                  "$ref": "#/parameters/heelHeight"
+               },
+               {
+                  "$ref": "#/parameters/length"
+               },
+               {
+                  "$ref": "#/parameters/occasion"
+               },
+               {
+                  "$ref": "#/parameters/pattern"
+               },
+               {
+                  "$ref": "#/parameters/price"
+               },
+               {
+                  "$ref": "#/parameters/sale"
+               },
+               {
+                  "$ref": "#/parameters/season"
+               },
+               {
+                  "$ref": "#/parameters/shaftHeight"
+               },
+               {
+                  "$ref": "#/parameters/shaftWidth"
+               },
+               {
+                  "$ref": "#/parameters/shirtCollar"
+               },
+               {
+                  "$ref": "#/parameters/shoeFastener"
+               },
+               {
+                  "$ref": "#/parameters/shoeToecap"
+               },
+               {
+                  "$ref": "#/parameters/shopArea"
+               },
+               {
+                  "$ref": "#/parameters/size"
+               },
+               {
+                  "$ref": "#/parameters/sports"
+               },
+               {
+                  "$ref": "#/parameters/technology"
+               },
+               {
+                  "$ref": "#/parameters/trouserRise"
+               },
+               {
+                  "$ref": "#/parameters/upperMaterial"
+               },
+               {
+                  "$ref": "#/parameters/volume"
+               },
+               {
+                  "$ref": "#/parameters/page"
+               },
+               {
+                  "$ref": "#/parameters/pageSize"
+               },
+               {
+                  "$ref": "#/parameters/sort"
+               },
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      },
+      "/articles/{articleId}": {
+         "get": {
+            "tags": [
+               "articles"
+            ],
+            "summary": "Get Article by articleId",
+            "description": "Zalando API Article Schema",
+            "responses": {
+               "200": {
+                  "description": "Article response.",
+                  "schema": {
+                     "$ref": "#/definitions/Article"
+                  },
+                  "examples": {
+                     "application/json": {
+                        "id": "AN621C0S5-K11",
+                        "modelId": "AN621C0S5",
+                        "name": "Summer dress - blue/white",
+                        "shopUrl": "https://www.zalando.co.uk/anna-field-summer-dress-blue-white-an621c0s5-k11.html",
+                        "color": "Blue",
+                        "available": true,
+                        "season": "SUMMER",
+                        "seasonYear": "2015",
+                        "activationDate": "2015-04-30T16:52:52+02:00",
+                        "additionalInfos": [],
+                        "genders": [
+                           "FEMALE"
+                        ],
+                        "ageGroups": [
+                           "ADULT"
+                        ],
+                        "brand": {
+                           "key": "AN6",
+                           "name": "Anna Field",
+                           "logoUrl": "https://i6.ztat.net/brand/anna-field.jpg",
+                           "shopUrl": "https://www.zalando.co.uk/anna-field"
+                        },
+                        "categoryKeys": [
+                           "catalog",
+                           "women",
+                           "womens-clothing",
+                           "womens-clothing-dresses",
+                           "summer-dresses",
+                           "all",
+                           "clothing"
+                        ],
+                        "attributes": [
+                           {
+                              "name": "Neckline",
+                              "values": [
+                                 "Crew neck"
+                              ]
+                           },
+                           {
+                              "name": "Fit",
+                              "values": [
+                                 "Waisted"
+                              ]
+                           }
+                        ],
+                        "units": [
+                           {
+                              "id": "AN621C0S5-K110420000",
+                              "size": "16",
+                              "price": {
+                                 "currency": "GBP",
+                                 "value": 21,
+                                 "formatted": "£21.00"
+                              },
+                              "originalPrice": {
+                                 "currency": "GBP",
+                                 "value": 21,
+                                 "formatted": "£21.00"
+                              },
+                              "available": true,
+                              "stock": 3
+                           }
+                        ],
+                        "media": {
+                           "images": [
+                              {
+                                 "orderNumber": 1,
+                                 "type": "NON_MODEL",
+                                 "thumbnailHdUrl": "https://i2.ztat.net/thumb_hd/AN/62/1C/0S/5K/11/AN621C0S5-K11@16.jpg",
+                                 "smallUrl": "https://i2.ztat.net/catalog/AN/62/1C/0S/5K/11/AN621C0S5-K11@16.jpg",
+                                 "smallHdUrl": "https://i2.ztat.net/catalog_hd/AN/62/1C/0S/5K/11/AN621C0S5-K11@16.jpg",
+                                 "mediumUrl": "https://i2.ztat.net/detail/AN/62/1C/0S/5K/11/AN621C0S5-K11@16.jpg",
+                                 "mediumHdUrl": "https://i2.ztat.net/detail_hd/AN/62/1C/0S/5K/11/AN621C0S5-K11@16.jpg",
+                                 "largeUrl": "https://i2.ztat.net/large/AN/62/1C/0S/5K/11/AN621C0S5-K11@16.jpg",
+                                 "largeHdUrl": "https://i2.ztat.net/large_hd/AN/62/1C/0S/5K/11/AN621C0S5-K11@16.jpg"
+                              },
+                              {
+                                 "orderNumber": 2,
+                                 "type": "STYLE",
+                                 "thumbnailHdUrl": "https://i3.ztat.net/thumb_hd/AN/62/1C/0S/5K/11/AN621C0S5-K11@15.jpg",
+                                 "smallUrl": "https://i3.ztat.net/catalog/AN/62/1C/0S/5K/11/AN621C0S5-K11@15.jpg",
+                                 "smallHdUrl": "https://i3.ztat.net/catalog_hd/AN/62/1C/0S/5K/11/AN621C0S5-K11@15.jpg",
+                                 "mediumUrl": "https://i3.ztat.net/detail/AN/62/1C/0S/5K/11/AN621C0S5-K11@15.jpg",
+                                 "mediumHdUrl": "https://i3.ztat.net/detail_hd/AN/62/1C/0S/5K/11/AN621C0S5-K11@15.jpg",
+                                 "largeUrl": "https://i3.ztat.net/large/AN/62/1C/0S/5K/11/AN621C0S5-K11@15.jpg",
+                                 "largeHdUrl": "https://i3.ztat.net/large_hd/AN/62/1C/0S/5K/11/AN621C0S5-K11@15.jpg"
+                              }
+                           ]
+                        }
+                     }
+                  }
+               },
+               "400": {
+                  "description": "Bad request.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               },
+               "404": {
+                  "description": "Not found.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "name": "articleId",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "To get unique article for article Id."
+               },
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      },
+      "/articles/{articleId}/media": {
+         "get": {
+            "tags": [
+               "articles"
+            ],
+            "summary": "Get Article media by articleId",
+            "description": "Zalando API Article Schema",
+            "responses": {
+               "200": {
+                  "description": "Article response.",
+                  "schema": {
+                     "$ref": "#/definitions/Article-Media"
+                  },
+                  "examples": {
+                     "application/json": {
+                        "images": [
+                           {
+                              "orderNumber": 1,
+                              "type": "NON_MODEL",
+                              "thumbnailHdUrl": "https://i2.ztat.net/thumb_hd/BE/82/4G/00/2C/11/BE824G002-C11@8.jpg",
+                              "smallUrl": "https://i2.ztat.net/catalog/BE/82/4G/00/2C/11/BE824G002-C11@8.jpg",
+                              "smallHdUrl": "https://i2.ztat.net/catalog_hd/BE/82/4G/00/2C/11/BE824G002-C11@8.jpg",
+                              "mediumUrl": "https://i2.ztat.net/detail/BE/82/4G/00/2C/11/BE824G002-C11@8.jpg",
+                              "mediumHdUrl": "https://i2.ztat.net/detail_hd/BE/82/4G/00/2C/11/BE824G002-C11@8.jpg",
+                              "largeUrl": "https://i2.ztat.net/large/BE/82/4G/00/2C/11/BE824G002-C11@8.jpg",
+                              "largeHdUrl": "https://i2.ztat.net/large_hd/BE/82/4G/00/2C/11/BE824G002-C11@8.jpg"
+                           }
+                        ]
+                     }
+                  }
+               },
+               "400": {
+                  "description": "Bad request.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               },
+               "404": {
+                  "description": "Not found.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "name": "articleId",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "To get unique article for article Id media."
+               },
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      },
+      "/articles/{articleId}/reviews": {
+         "get": {
+            "tags": [
+               "articles"
+            ],
+            "summary": "Get Article reviews by articleId",
+            "description": "Zalando API Article Schema",
+            "responses": {
+               "200": {
+                  "description": "Article response.",
+                  "schema": {
+                     "$ref": "#/definitions/Article-Reviews"
+                  },
+                  "examples": {
+                     "application/json": {
+                        "content": [
+                           {
+                              "reviewId": "4405383-EW012B00C-C11",
+                              "articleId": "EW012B00C-C11",
+                              "articleModelId": "EW012B00C",
+                              "customerCity": "Brixton",
+                              "customerCountry": "GB",
+                              "language": "en",
+                              "title": "Dream turned to reality in the blink of an eye!",
+                              "description": "Very nice trainers, with an extremely prompt arrival...",
+                              "created": "2015-07-23T17:52:14+02:00",
+                              "rating": 5,
+                              "recommend": false,
+                              "helpfulCount": 0,
+                              "unhelpfulCount": 0,
+                              "articleSizeRatings": {
+                                 "OVERALL": 3,
+                                 "SHOE_WIDTH": 3
+                              }
+                           }
+                        ],
+                        "totalElements": 1,
+                        "totalPages": 1,
+                        "page": 1,
+                        "size": 1
+                     }
+                  }
+               },
+               "400": {
+                  "description": "Bad request.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               },
+               "404": {
+                  "description": "Not found.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "name": "articleId",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "To get unique article for article Id reviews."
+               },
+               {
+                  "$ref": "#/parameters/minStarRating"
+               },
+               {
+                  "$ref": "#/parameters/maxStarRating"
+               },
+               {
+                  "$ref": "#/parameters/articleReviewSort"
+               },
+               {
+                  "$ref": "#/parameters/page"
+               },
+               {
+                  "$ref": "#/parameters/pageSize"
+               },
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      },
+      "/articles/{articleId}/reviews-summary": {
+         "get": {
+            "tags": [
+               "articles"
+            ],
+            "summary": "Get Article reviews summary by articleId",
+            "description": "Zalando API Article Schema",
+            "responses": {
+               "200": {
+                  "description": "Article response.",
+                  "schema": {
+                     "$ref": "#/definitions/Article-Reviews-Summary"
+                  },
+                  "examples": {
+                     "application/json": {
+                        "articleModelId": "EW012B00C",
+                        "averageStarRating": 5,
+                        "numberOfUserReviews": 1,
+                        "numberOfUserRecommendations": 1,
+                        "numberOfUserPositiveRecommendations": 0,
+                        "starRatingDistribution": {
+                           "1": 0,
+                           "2": 0,
+                           "3": 0,
+                           "4": 0,
+                           "5": 1
+                        },
+                        "articleSizeRatings": {
+                           "OVERALL": 3,
+                           "SHOE_WIDTH": 3
+                        }
+                     }
+                  }
+               },
+               "400": {
+                  "description": "Bad request.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               },
+               "404": {
+                  "description": "Not found.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "name": "articleId",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "To get unique article for article Id reviews summary."
+               },
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      },
+      "/articles/{articleId}/units": {
+         "get": {
+            "tags": [
+               "articles"
+            ],
+            "summary": "Get Article units by articleId",
+            "description": "Zalando API Article Schema",
+            "responses": {
+               "200": {
+                  "description": "Article response.",
+                  "schema": {
+                     "$ref": "#/definitions/Article-Units"
+                  },
+                  "examples": {
+                     "application/json": [
+                        {
+                           "id": "TC021A00J-A110040000",
+                           "size": "14",
+                           "price": {
+                              "currency": "GBP",
+                              "value": 65,
+                              "formatted": "£65.00"
+                           },
+                           "originalPrice": {
+                              "currency": "GBP",
+                              "value": 130,
+                              "formatted": "£130.00"
+                           },
+                           "available": false,
+                           "stock": 0
+                        }
+                     ]
+                  }
+               },
+               "400": {
+                  "description": "Bad request.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               },
+               "404": {
+                  "description": "Not found.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "name": "articleId",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "To get unique article for article Id units."
+               },
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      },
+      "/articles/{articleId}/units/{unitId}": {
+         "get": {
+            "tags": [
+               "articles"
+            ],
+            "summary": "Get Article units by articleId snd unitId",
+            "description": "Zalando API Article Schema",
+            "responses": {
+               "200": {
+                  "description": "Article response.",
+                  "schema": {
+                     "$ref": "#/definitions/Article-Unit"
+                  },
+                  "examples": {
+                     "application/json": {
+                        "id": "TC021A00J-A110040000",
+                        "size": "14",
+                        "price": {
+                           "currency": "GBP",
+                           "value": 65,
+                           "formatted": "£65.00"
+                        },
+                        "originalPrice": {
+                           "currency": "GBP",
+                           "value": 130,
+                           "formatted": "£130.00"
+                        },
+                        "available": false,
+                        "stock": 0
+                     }
+                  }
+               },
+               "400": {
+                  "description": "Bad request.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               },
+               "404": {
+                  "description": "Not found.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "name": "articleId",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "To get unique article for article Id."
+               },
+               {
+                  "name": "unitId",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "To get unique article for article Id unit."
+               },
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      },
+      "/article-reviews": {
+         "get": {
+            "tags": [
+               "articles"
+            ],
+            "summary": "Get Article Reviews",
+            "description": "Zalando API Article Reviews Schema",
+            "responses": {
+               "200": {
+                  "description": "Articles Reviews response.",
+                  "schema": {
+                     "$ref": "#/definitions/Article-Reviews"
+                  },
+                  "examples": {
+                     "application/json": {
+                        "content": [
+                           {
+                              "reviewId": "4405383-EW012B00C-C11",
+                              "articleId": "EW012B00C-C11",
+                              "articleModelId": "EW012B00C",
+                              "customerCity": "Brixton",
+                              "customerCountry": "GB",
+                              "language": "en",
+                              "title": "Dream turned to reality in the blink of an eye!",
+                              "description": "Very nice trainers, with an extremely prompt arrival... ",
+                              "created": "2015-07-23T17:52:14+02:00",
+                              "rating": 5,
+                              "recommend": false,
+                              "helpfulCount": 0,
+                              "unhelpfulCount": 0,
+                              "articleSizeRatings": {
+                                 "OVERALL": 3,
+                                 "SHOE_WIDTH": 3
+                              }
+                           }
+                        ]
+                     }
+                  }
+               },
+               "400": {
+                  "description": "Bad request.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "name": "articleId",
+                  "in": "query",
+                  "required": false,
+                  "description": "Article IDs. A list of config SKUs for which the article reviews will be returned.\nRequired if articleModelId is empty.\n",
+                  "type": "array",
+                  "items": {
+                     "type": "string"
+                  },
+                  "collectionFormat": "multi"
+               },
+               {
+                  "name": "articleModelId",
+                  "in": "query",
+                  "required": false,
+                  "description": "Article model IDs. A list of model SKUs for which the article reviews will be returned.\nRequired if articleId is empty.\n",
+                  "type": "array",
+                  "items": {
+                     "type": "string"
+                  },
+                  "collectionFormat": "multi"
+               },
+               {
+                  "$ref": "#/parameters/minStarRating"
+               },
+               {
+                  "$ref": "#/parameters/maxStarRating"
+               },
+               {
+                  "$ref": "#/parameters/articleReviewSort"
+               },
+               {
+                  "$ref": "#/parameters/page"
+               },
+               {
+                  "$ref": "#/parameters/pageSize"
+               },
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      },
+      "/article-reviews-summaries": {
+         "get": {
+            "tags": [
+               "articles"
+            ],
+            "summary": "Get Article Reviews Summaries",
+            "description": "Zalando API Article Reviews Summaries Schema",
+            "responses": {
+               "200": {
+                  "description": "Articles Reviews Summaries response.",
+                  "schema": {
+                     "$ref": "#/definitions/Article-Reviews-Summaries"
+                  },
+                  "examples": {
+                     "application/json": {
+                        "content": [
+                           {
+                              "articleModelId": "K4411C00Y",
+                              "averageStarRating": 4,
+                              "numberOfUserReviews": 1,
+                              "numberOfUserRecommendations": 0,
+                              "numberOfUserPositiveRecommendations": 0,
+                              "starRatingDistribution": {
+                                 "1": 0,
+                                 "2": 0,
+                                 "3": 0,
+                                 "4": 1,
+                                 "5": 0
+                              }
+                           }
+                        ]
+                     }
+                  }
+               },
+               "400": {
+                  "description": "Bad request.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "name": "articleModelId",
+                  "in": "query",
+                  "required": true,
+                  "description": "Article model IDs. A list of model SKUs for which the article review summaries will be returned.",
+                  "type": "array",
+                  "items": {
+                     "type": "string"
+                  },
+                  "collectionFormat": "multi"
+               },
+               {
+                  "$ref": "#/parameters/page"
+               },
+               {
+                  "$ref": "#/parameters/pageSize"
+               },
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      },
+      "/article-reviews-summaries/{articleModelId}": {
+         "get": {
+            "tags": [
+               "articles"
+            ],
+            "summary": "Get Article Reviews Summaries by articleModelId",
+            "description": "Zalando API ArticleReviewsSummaries Schema",
+            "responses": {
+               "200": {
+                  "description": "Articles Reviews Summaries by articleModelId response.",
+                  "schema": {
+                     "$ref": "#/definitions/Article-Reviews-Summary"
+                  },
+                  "examples": {
+                     "application/json": {
+                        "articleModelId": "K4411C00Y",
+                        "averageStarRating": 4,
+                        "numberOfUserReviews": 1,
+                        "numberOfUserRecommendations": 0,
+                        "numberOfUserPositiveRecommendations": 0,
+                        "starRatingDistribution": {
+                           "1": 0,
+                           "2": 0,
+                           "3": 0,
+                           "4": 1,
+                           "5": 0
+                        }
+                     }
+                  }
+               },
+               "400": {
+                  "description": "Bad request.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               },
+               "404": {
+                  "description": "Not found.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "name": "articleModelId",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "To get unique reviews summary from article model Id."
+               },
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      },
+      "/article-reviews/{reviewId}": {
+         "get": {
+            "tags": [
+               "articles"
+            ],
+            "summary": "Get Article Reviews by reviewId",
+            "description": "Zalando API ArticleReviews Schema",
+            "responses": {
+               "200": {
+                  "description": "Articles Reviews by reviewId response.",
+                  "schema": {
+                     "$ref": "#/definitions/Article-Review"
+                  },
+                  "examples": {
+                     "application/json": {
+                        "reviewId": "4405383-EW012B00C-C11",
+                        "articleId": "EW012B00C-C11",
+                        "articleModelId": "EW012B00C",
+                        "customerCity": "Brixton",
+                        "customerCountry": "GB",
+                        "language": "en",
+                        "title": "Dream turned to reality in the blink of an eye!",
+                        "description": "Very nice trainers, with an extremely prompt arrival...",
+                        "created": "2015-07-23T17:52:14+02:00",
+                        "rating": 5,
+                        "recommend": false,
+                        "helpfulCount": 0,
+                        "unhelpfulCount": 0,
+                        "articleSizeRatings": {
+                           "OVERALL": 3,
+                           "SHOE_WIDTH": 3
+                        }
+                     }
+                  }
+               },
+               "404": {
+                  "description": "Not found.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "name": "reviewId",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "To get unique review by review Id."
+               },
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      },
+      "/domains": {
+         "get": {
+            "tags": [
+               "domains"
+            ],
+            "summary": "Shop Domains",
+            "description": "Zalando API Domains Schema",
+            "responses": {
+               "200": {
+                  "description": "Domains response.",
+                  "schema": {
+                     "description": "Zalando API Domains Schema",
+                     "type": "array",
+                     "items": {
+                        "$ref": "#/definitions/Domain"
+                     }
+                  }
+               }
+            }
+         }
+      },
+      "/brands": {
+         "get": {
+            "tags": [
+               "brands"
+            ],
+            "summary": "Shop Brands",
+            "description": "Zalando API Brands Schema",
+            "responses": {
+               "200": {
+                  "description": "Brands response.",
+                  "schema": {
+                     "$ref": "#/definitions/Brands"
+                  },
+                  "examples": {
+                     "application/json": {
+                        "content": [
+                           {
+                              "key": "NV3",
+                              "name": "Nike Vision",
+                              "shopUrl": "https://www.zalando.co.uk/nike-vision"
+                           },
+                           {
+                              "key": "N12",
+                              "name": "Nike Performance",
+                              "logoUrl": "https://i1.ztat.net/brand/nike-performance.jpg",
+                              "logoLargeUrl": "https://i1.ztat.net/brandxl/nike-performance.jpg",
+                              "shopUrl": "https://www.zalando.co.uk/nike-performance",
+                              "brandFamily": {
+                                 "key": "NIKE",
+                                 "name": "Nike",
+                                 "shopUrl": "https://www.zalando.co.uk/nike"
+                              }
+                           }
+                        ],
+                        "totalElements": 6,
+                        "totalPages": 3,
+                        "page": 1,
+                        "size": 2
+                     }
+                  }
+               },
+               "400": {
+                  "description": "Bad request.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               },
+               "404": {
+                  "description": "Not found.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "name": "key",
+                  "in": "query",
+                  "description": "Request Brand by key",
+                  "required": false,
+                  "type": "array",
+                  "items": {
+                     "type": "string"
+                  },
+                  "collectionFormat": "multi"
+               },
+               {
+                  "name": "name",
+                  "in": "query",
+                  "description": "Request Brand by name",
+                  "required": false,
+                  "type": "array",
+                  "items": {
+                     "type": "string"
+                  },
+                  "collectionFormat": "multi"
+               },
+               {
+                  "name": "brandFamilyName",
+                  "in": "query",
+                  "description": "Request Brand by brandFamilyName",
+                  "required": false,
+                  "type": "array",
+                  "items": {
+                     "type": "string"
+                  },
+                  "collectionFormat": "multi"
+               },
+               {
+                  "name": "brandFamilyKey",
+                  "in": "query",
+                  "description": "Request Brand by brandFamilyKey",
+                  "required": false,
+                  "type": "array",
+                  "items": {
+                     "type": "string"
+                  },
+                  "collectionFormat": "multi"
+               },
+               {
+                  "$ref": "#/parameters/page"
+               },
+               {
+                  "$ref": "#/parameters/pageSize"
+               },
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      },
+      "/brands/{key}": {
+         "get": {
+            "tags": [
+               "brands"
+            ],
+            "summary": "Get Single Brand by Key",
+            "description": "Zalando API Brand Schema",
+            "responses": {
+               "200": {
+                  "description": "Brand Key response.",
+                  "schema": {
+                     "$ref": "#/definitions/Brand"
+                  },
+                  "examples": {
+                     "application/json": {
+                        "key": "N12",
+                        "name": "Nike Performance",
+                        "logoUrl": "https://i1.ztat.net/brand/nike-performance.jpg",
+                        "logoLargeUrl": "https://i1.ztat.net/brandxl/nike-performance.jpg",
+                        "brandFamily": {
+                           "key": "NIKE",
+                           "name": "Nike",
+                           "shopUrl": "https://www.zalando.co.uk/nike"
+                        },
+                        "shopUrl": "https://www.zalando.co.uk/nike-performance"
+                     }
+                  }
+               },
+               "404": {
+                  "description": "Brand not found.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "name": "key",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "To get unique Brand by key."
+               },
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      },
+      "/categories": {
+         "get": {
+            "tags": [
+               "categories"
+            ],
+            "summary": "Shop Categories",
+            "description": "Zalando API Categories Schema",
+            "responses": {
+               "200": {
+                  "description": "Categories response.",
+                  "schema": {
+                     "$ref": "#/definitions/Categories"
+                  },
+                  "examples": {
+                     "application/json": {
+                        "content": [
+                           {
+                              "key": "catalog",
+                              "name": "Catalog",
+                              "childKeys": [
+                                 "all",
+                                 "women",
+                                 "men",
+                                 "kids",
+                                 "home"
+                              ],
+                              "type": "default",
+                              "outlet": false,
+                              "hidden": false,
+                              "targetGroup": "ALL",
+                              "suggestedFilters": [
+                                 "category",
+                                 "brand",
+                                 "color",
+                                 "price",
+                                 "activationDate"
+                              ]
+                           },
+                           {
+                              "key": "women",
+                              "name": "Women",
+                              "parentKey": "catalog",
+                              "childKeys": [
+                                 "womens-shoes",
+                                 "womens-clothing",
+                                 "sports-womens",
+                                 "premium-womens"
+                              ],
+                              "type": "default",
+                              "outlet": false,
+                              "hidden": false,
+                              "targetGroup": "WOMEN",
+                              "suggestedFilters": [
+                                 "brandfamily",
+                                 "sale",
+                                 "upperMaterial",
+                                 "season"
+                              ]
+                           }
+                        ],
+                        "totalElements": 2263,
+                        "totalPages": 1132,
+                        "page": 1,
+                        "size": 2
+                     }
+                  }
+               },
+               "400": {
+                  "description": "Bad request.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               },
+               "404": {
+                  "description": "Categories Not found.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "name": "name",
+                  "in": "query",
+                  "description": "Request Categories by names",
+                  "required": false,
+                  "type": "array",
+                  "items": {
+                     "type": "string"
+                  },
+                  "collectionFormat": "multi"
+               },
+               {
+                  "name": "type",
+                  "in": "query",
+                  "description": "Request Categories by type",
+                  "required": false,
+                  "type": "string",
+                  "collectionFormat": "multi"
+               },
+               {
+                  "name": "outlet",
+                  "in": "query",
+                  "description": "Request Categories by outlet",
+                  "required": false,
+                  "type": "string",
+                  "collectionFormat": "multi"
+               },
+               {
+                  "name": "hidden",
+                  "in": "query",
+                  "description": "Request Categories by hidden",
+                  "required": false,
+                  "type": "string",
+                  "collectionFormat": "multi"
+               },
+               {
+                  "name": "targetGroup",
+                  "in": "query",
+                  "description": "Request Categories by target group",
+                  "required": false,
+                  "type": "string",
+                  "collectionFormat": "multi"
+               },
+               {
+                  "name": "key",
+                  "in": "query",
+                  "description": "Request Categories by keys",
+                  "required": false,
+                  "type": "array",
+                  "items": {
+                     "type": "string"
+                  },
+                  "collectionFormat": "multi"
+               },
+               {
+                  "name": "parentKey",
+                  "in": "query",
+                  "description": "Request Categories by parent keys",
+                  "required": false,
+                  "type": "array",
+                  "items": {
+                     "type": "string"
+                  },
+                  "collectionFormat": "multi"
+               },
+               {
+                  "name": "childKey",
+                  "in": "query",
+                  "description": "Request Categories by child keys",
+                  "required": false,
+                  "type": "array",
+                  "items": {
+                     "type": "string"
+                  },
+                  "collectionFormat": "multi"
+               },
+               {
+                  "name": "suggestedFilter",
+                  "in": "query",
+                  "description": "Request Categories by suggested filters",
+                  "required": false,
+                  "type": "array",
+                  "items": {
+                     "type": "string"
+                  },
+                  "collectionFormat": "multi"
+               },
+               {
+                  "$ref": "#/parameters/page"
+               },
+               {
+                  "$ref": "#/parameters/pageSize"
+               },
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      },
+      "/categories/{key}": {
+         "get": {
+            "tags": [
+               "categories"
+            ],
+            "summary": "Get Single Category by Key",
+            "description": "Zalando API Category Schema",
+            "responses": {
+               "200": {
+                  "description": "Category Key response.",
+                  "schema": {
+                     "$ref": "#/definitions/Category"
+                  },
+                  "examples": {
+                     "application/json": {
+                        "content": [
+                           {
+                              "key": "women",
+                              "name": "Women",
+                              "parentKey": "catalog",
+                              "childKeys": [
+                                 "womens-shoes",
+                                 "womens-clothing",
+                                 "sports-womens",
+                                 "premium-womens"
+                              ],
+                              "type": "default",
+                              "outlet": false,
+                              "hidden": false,
+                              "targetGroup": "WOMEN"
+                           }
+                        ]
+                     }
+                  }
+               },
+               "404": {
+                  "description": "Category not found.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "name": "key",
+                  "type": "array",
+                  "items": {
+                     "type": "string"
+                  },
+                  "in": "path",
+                  "required": true,
+                  "description": "To get unique Category by key."
+               },
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      },
+      "/recommendations/{articleIds}": {
+         "get": {
+            "tags": [
+               "recommendations"
+            ],
+            "summary": "Get Recommendations by articleId",
+            "description": "Zalando API Recommendations Schema",
+            "responses": {
+               "200": {
+                  "description": "Recommendations response.",
+                  "schema": {
+                     "$ref": "#/definitions/Recommendations"
+                  },
+                  "examples": {
+                     "application/json": {
+                        "id": "TC021A00J-A11",
+                        "modelId": "TC021A00J",
+                        "name": "MADDY - Jumpsuit - waterlilly/noir",
+                        "shopUrl": "https://www.zalando.co.uk/2-love-tony-cohen-maddy-jumpsuit-white-tc021a00j-a11.html",
+                        "media": {
+                           "images": [
+                              {
+                                 "orderNumber": 1,
+                                 "type": "UNSPECIFIED",
+                                 "thumbnailHdUrl": "https://i5.ztat.net/thumb_hd/TC/02/1A/00/JA/11/TC021A00J-A11@12.jpg",
+                                 "smallUrl": "https://i5.ztat.net/catalog/TC/02/1A/00/JA/11/TC021A00J-A11@12.jpg",
+                                 "smallHdUrl": "https://i5.ztat.net/catalog_hd/TC/02/1A/00/JA/11/TC021A00J-A11@12.jpg",
+                                 "mediumUrl": "https://i5.ztat.net/detail/TC/02/1A/00/JA/11/TC021A00J-A11@12.jpg",
+                                 "mediumHdUrl": "https://i5.ztat.net/detail_hd/TC/02/1A/00/JA/11/TC021A00J-A11@12.jpg",
+                                 "largeUrl": "https://i5.ztat.net/large/TC/02/1A/00/JA/11/TC021A00J-A11@12.jpg",
+                                 "largeHdUrl": "https://i5.ztat.net/large_hd/TC/02/1A/00/JA/11/TC021A00J-A11@12.jpg"
+                              }
+                           ]
+                        }
+                     }
+                  }
+               },
+               "400": {
+                  "description": "Bad Request.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "name": "articleIds",
+                  "type": "array",
+                  "items": {
+                     "type": "string"
+                  },
+                  "in": "path",
+                  "required": true,
+                  "description": "To get Recommendations by articleIds."
+               },
+               {
+                  "name": "maxResults",
+                  "type": "string",
+                  "in": "query",
+                  "required": false,
+                  "description": "To get maximum results of Recommendations by articleId."
+               },
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      },
+      "/filters": {
+         "get": {
+            "tags": [
+               "filters"
+            ],
+            "summary": "Shop Filters",
+            "description": "Zalando API Filters Schema",
+            "responses": {
+               "200": {
+                  "description": "Filters response.",
+                  "schema": {
+                     "$ref": "#/definitions/Filters"
+                  },
+                  "examples": {
+                     "application/json": [
+                        {
+                           "name": "ageGroup",
+                           "multiValue": true,
+                           "type": "ENUM",
+                           "values": [
+                              {
+                                 "key": "babies",
+                                 "displayName": "babies"
+                              },
+                              {
+                                 "key": "kids",
+                                 "displayName": "kids"
+                              },
+                              {
+                                 "key": "teen",
+                                 "displayName": "teen"
+                              },
+                              {
+                                 "key": "adult",
+                                 "displayName": "adult"
+                              }
+                           ]
+                        },
+                        {
+                           "name": "brand",
+                           "multiValue": true,
+                           "type": "KEY",
+                           "values": []
+                        }
+                     ]
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      },
+      "/filters/{filterName}": {
+         "get": {
+            "tags": [
+               "filters"
+            ],
+            "summary": "Get Single Filter by filterName",
+            "description": "Zalando API Filters Schema",
+            "responses": {
+               "200": {
+                  "description": "Filters response.",
+                  "schema": {
+                     "$ref": "#/definitions/Filter"
+                  },
+                  "examples": {
+                     "application/json": {
+                        "name": "ageGroup",
+                        "multiValue": true,
+                        "type": "ENUM",
+                        "values": [
+                           {
+                              "key": "babies",
+                              "displayName": "babies"
+                           },
+                           {
+                              "key": "kids",
+                              "displayName": "kids"
+                           },
+                           {
+                              "key": "teen",
+                              "displayName": "teen"
+                           },
+                           {
+                              "key": "adult",
+                              "displayName": "adult"
+                           }
+                        ]
+                     }
+                  }
+               },
+               "404": {
+                  "description": "Filter not found.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "name": "filterName",
+                  "type": "string",
+                  "in": "path",
+                  "required": true,
+                  "description": "To get Filter by filterName."
+               },
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      },
+      "/facets": {
+         "get": {
+            "tags": [
+               "facets"
+            ],
+            "summary": "Shop Facets",
+            "description": "Zalando API Facets Schema",
+            "responses": {
+               "200": {
+                  "description": "Facets response.",
+                  "schema": {
+                     "$ref": "#/definitions/Facets"
+                  },
+                  "examples": {
+                     "application/json": [
+                        {
+                           "filter": "category",
+                           "facets": [
+                              {
+                                 "key": "childrens-sports-shoes",
+                                 "displayName": "Sports Shoes",
+                                 "count": 2080
+                              },
+                              {
+                                 "key": "childrens-outdoor-shoes",
+                                 "displayName": "Outdoor Shoes",
+                                 "count": 273
+                              },
+                              {
+                                 "key": "kids-shoes-sandals-flip-flops",
+                                 "displayName": "Sandals & Flip Flops",
+                                 "count": 1365
+                              }
+                           ]
+                        },
+                        {
+                           "filter": "gender",
+                           "facets": [
+                              {
+                                 "key": "female",
+                                 "displayName": "female",
+                                 "count": 190247
+                              },
+                              {
+                                 "key": "male",
+                                 "displayName": "male",
+                                 "count": 117211
+                              }
+                           ]
+                        },
+                        {
+                           "filter": "season",
+                           "facets": [
+                              {
+                                 "key": "allSeason",
+                                 "displayName": "allSeason",
+                                 "count": 17844
+                              },
+                              {
+                                 "key": "summer",
+                                 "displayName": "summer",
+                                 "count": 155667
+                              },
+                              {
+                                 "key": "winter",
+                                 "displayName": "winter",
+                                 "count": 116763
+                              }
+                           ]
+                        }
+                     ]
+                  }
+               },
+               "400": {
+                  "description": "Bad request.",
+                  "schema": {
+                     "$ref": "#/definitions/ErrorMessage"
+                  }
+               }
+            },
+            "parameters": [
+               {
+                  "$ref": "#/parameters/ageGroup"
+               },
+               {
+                  "$ref": "#/parameters/articleId"
+               },
+               {
+                  "$ref": "#/parameters/activationDate"
+               },
+               {
+                  "$ref": "#/parameters/articleModelId"
+               },
+               {
+                  "$ref": "#/parameters/assortmentArea"
+               },
+               {
+                  "$ref": "#/parameters/brand"
+               },
+               {
+                  "$ref": "#/parameters/brandfamily"
+               },
+               {
+                  "$ref": "#/parameters/category"
+               },
+               {
+                  "$ref": "#/parameters/color"
+               },
+               {
+                  "$ref": "#/parameters/den"
+               },
+               {
+                  "$ref": "#/parameters/filling"
+               },
+               {
+                  "$ref": "#/parameters/gender"
+               },
+               {
+                  "$ref": "#/parameters/heelForm"
+               },
+               {
+                  "$ref": "#/parameters/heelHeight"
+               },
+               {
+                  "$ref": "#/parameters/length"
+               },
+               {
+                  "$ref": "#/parameters/occasion"
+               },
+               {
+                  "$ref": "#/parameters/pattern"
+               },
+               {
+                  "$ref": "#/parameters/price"
+               },
+               {
+                  "$ref": "#/parameters/sale"
+               },
+               {
+                  "$ref": "#/parameters/season"
+               },
+               {
+                  "$ref": "#/parameters/shaftHeight"
+               },
+               {
+                  "$ref": "#/parameters/shaftWidth"
+               },
+               {
+                  "$ref": "#/parameters/shirtCollar"
+               },
+               {
+                  "$ref": "#/parameters/shoeFastener"
+               },
+               {
+                  "$ref": "#/parameters/shoeToecap"
+               },
+               {
+                  "$ref": "#/parameters/shopArea"
+               },
+               {
+                  "$ref": "#/parameters/size"
+               },
+               {
+                  "$ref": "#/parameters/sports"
+               },
+               {
+                  "$ref": "#/parameters/technology"
+               },
+               {
+                  "$ref": "#/parameters/trouserRise"
+               },
+               {
+                  "$ref": "#/parameters/upperMaterial"
+               },
+               {
+                  "$ref": "#/parameters/volume"
+               },
+               {
+                  "$ref": "#/parameters/acceptLanguage"
+               },
+               {
+                  "$ref": "#/parameters/fields"
+               }
+            ]
+         }
+      }
+   },
+   "definitions": {
+      "Articles": {
+         "type": "object",
+         "description": "A simple container object that carries paging information as well as a list of articles on the `content` property.",
+         "allOf": [
+            {
+               "$ref": "#/definitions/Page"
+            },
+            {
+               "properties": {
+                  "content": {
+                     "type": "array",
+                     "items": {
+                        "$ref": "#/definitions/Article"
+                     },
+                     "minItems": 0
+                  }
+               }
+            }
+         ]
+      },
+      "Article": {
+         "type": "object",
+         "description": "A single article",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "unique article id"
+            },
+            "modelId": {
+               "type": "string",
+               "description": "unique article model id"
+            },
+            "name": {
+               "type": "string",
+               "description": "article name"
+            },
+            "shopUrl": {
+               "type": "string",
+               "format": "uri",
+               "description": "url of the article within the Zalando webshop"
+            },
+            "color": {
+               "type": "string",
+               "description": "the main color of the article"
+            },
+            "available": {
+               "type": "boolean",
+               "description": "will be true if at least one article unit is available"
+            },
+            "season": {
+               "type": "string",
+               "enum": [
+                  "SUMMER",
+                  "WINTER",
+                  "ALL"
+               ],
+               "description": "collection season the article belongs to"
+            },
+            "seasonYear": {
+               "type": "string",
+               "pattern": "^ALL$|^20[0-9]{2}$",
+               "description": "collection year the article belongs to. Could be either a year or 'ALL'"
+            },
+            "activationDate": {
+               "type": "string",
+               "format": "date-time",
+               "description": "timestamp the article was available in the Zalando webshop"
+            },
+            "additionalInfos": {
+               "type": "array",
+               "items": {
+                  "type": "string"
+               },
+               "minItems": 0,
+               "description": "any additional information of the article "
+            },
+            "genders": {
+               "type": "array",
+               "items": {
+                  "type": "string",
+                  "enum": [
+                     "MALE",
+                     "FEMALE"
+                  ]
+               },
+               "minItems": 1,
+               "description": "gender of the article belongs to"
+            },
+            "ageGroups": {
+               "type": "array",
+               "items": {
+                  "type": "string",
+                  "enum": [
+                     "BABY",
+                     "CHILD",
+                     "TEEN",
+                     "ADULT"
+                  ]
+               },
+               "minItems": 1,
+               "description": "age group of the article belongs to"
+            },
+            "brand": {
+               "$ref": "#/definitions/Brand"
+            },
+            "categoryKeys": {
+               "type": "array",
+               "items": {
+                  "type": "string"
+               },
+               "minItems": 1,
+               "description": "category keys of the article belongs to"
+            },
+            "attributes": {
+               "type": "array",
+               "items": {
+                  "$ref": "#/definitions/Article-Attribute"
+               },
+               "minItems": 0,
+               "description": "article attributes"
+            },
+            "units": {
+               "type": "array",
+               "items": {
+                  "$ref": "#/definitions/Article-Unit"
+               },
+               "minItems": 1,
+               "description": "price of the article"
+            },
+            "tags": {
+               "type": "array",
+               "items": {
+                  "type": "string"
+               }
+            },
+            "media": {
+               "$ref": "#/definitions/Article-Media"
+            }
+         },
+         "required": [
+            "id",
+            "modelId",
+            "name",
+            "shopUrl",
+            "color",
+            "available",
+            "season",
+            "seasonYear",
+            "activationDate",
+            "additionalInfos",
+            "genders",
+            "ageGroups",
+            "brand",
+            "categoryKeys",
+            "attributes",
+            "units",
+            "media"
+         ]
+      },
+      "Article-Attribute": {
+         "type": "object",
+         "description": "Zalando API Article Attribute Schema",
+         "properties": {
+            "name": {
+               "type": "string",
+               "description": "name of the article attribute"
+            },
+            "values": {
+               "type": "array",
+               "items": {
+                  "type": "string"
+               },
+               "minItems": 1,
+               "description": "value of the article attribute"
+            }
+         },
+         "required": [
+            "name",
+            "values"
+         ]
+      },
+      "Article-Image": {
+         "type": "object",
+         "description": "Zalando API Article Image Schema",
+         "properties": {
+            "orderNumber": {
+               "type": "integer",
+               "description": "sequence of the article images"
+            },
+            "type": {
+               "type": "string",
+               "description": "model or non model type article images"
+            },
+            "thumbnailHdUrl": {
+               "type": "string",
+               "format": "uri",
+               "description": "thumbnail HD url of the article images"
+            },
+            "smallUrl": {
+               "type": "string",
+               "format": "uri",
+               "description": "small image of the article"
+            },
+            "smallHdUrl": {
+               "type": "string",
+               "format": "uri",
+               "description": "small HD image of the article"
+            },
+            "mediumUrl": {
+               "type": "string",
+               "format": "uri",
+               "description": "medium image of the article"
+            },
+            "mediumHdUrl": {
+               "type": "string",
+               "format": "uri",
+               "description": "medium HD image of the article"
+            },
+            "largeUrl": {
+               "type": "string",
+               "format": "uri",
+               "description": "large image of the article"
+            },
+            "largeHdUrl": {
+               "type": "string",
+               "format": "uri",
+               "description": "large HD image of the article"
+            }
+         },
+         "required": [
+            "orderNumber",
+            "type",
+            "thumbnailHdUrl",
+            "smallUrl",
+            "smallHdUrl",
+            "mediumUrl",
+            "mediumHdUrl",
+            "largeUrl",
+            "largeHdUrl"
+         ]
+      },
+      "Article-Media": {
+         "type": "object",
+         "description": "Zalando API Article Media Schema",
+         "properties": {
+            "images": {
+               "type": "array",
+               "items": {
+                  "$ref": "#/definitions/Article-Image"
+               },
+               "minItems": 0
+            }
+         },
+         "required": [
+            "images"
+         ]
+      },
+      "Article-Price": {
+         "type": "object",
+         "description": "Zalando API Article Price Schema",
+         "properties": {
+            "currency": {
+               "type": "string",
+               "description": ""
+            },
+            "value": {
+               "type": "number",
+               "description": ""
+            },
+            "formatted": {
+               "type": "string",
+               "description": ""
+            }
+         },
+         "required": [
+            "currency",
+            "value",
+            "formatted"
+         ]
+      },
+      "Article-Review": {
+         "type": "object",
+         "description": "Zalando API Article Review Schema",
+         "properties": {
+            "reviewId": {
+               "type": "string",
+               "description": "unique article review id"
+            },
+            "articleId": {
+               "type": "string"
+            },
+            "articleModelId": {
+               "type": "string"
+            },
+            "customerNickname": {
+               "type": "string",
+               "description": "Customer short name in the article review"
+            },
+            "customerCity": {
+               "type": "string",
+               "description": "customer city in the article review"
+            },
+            "customerCountry": {
+               "type": "string",
+               "description": "customer country in the article review"
+            },
+            "language": {
+               "type": "string",
+               "description": "language in the article review"
+            },
+            "title": {
+               "type": "string",
+               "description": "title in the article review"
+            },
+            "description": {
+               "type": "string",
+               "description": "description of the article review"
+            },
+            "created": {
+               "type": "string",
+               "format": "date-time",
+               "description": "article review created date and time"
+            },
+            "rating": {
+               "type": "integer",
+               "description": "customer rating of the article"
+            },
+            "recommend": {
+               "type": "boolean",
+               "description": "customer recommend to the article"
+            },
+            "helpfulCount": {
+               "type": "integer",
+               "description": "customer review helpful count of the article"
+            },
+            "unhelpfulCount": {
+               "type": "integer",
+               "description": "customer review unhelpful count of the article"
+            },
+            "articleSizeRatings": {
+               "type": "object",
+               "description": "",
+               "properties": {
+                  "OVERALL": {
+                     "type": "integer"
+                  },
+                  "CHEST": {
+                     "type": "integer"
+                  },
+                  "SLEEVES": {
+                     "type": "integer"
+                  },
+                  "SHOULDERS": {
+                     "type": "integer"
+                  },
+                  "LENGTH": {
+                     "type": "integer"
+                  },
+                  "LEG_FIT": {
+                     "type": "integer"
+                  },
+                  "SHOE_WIDTH": {
+                     "type": "integer"
+                  },
+                  "BOOTLEG_WIDTH": {
+                     "type": "integer"
+                  },
+                  "HIPS_OR_REAR": {
+                     "type": "integer"
+                  },
+                  "CUP_SIZE": {
+                     "type": "integer"
+                  },
+                  "CHEST_GIRTH": {
+                     "type": "integer"
+                  },
+                  "COLLAR_SIZE": {
+                     "type": "integer"
+                  }
+               }
+            }
+         },
+         "required": [
+            "reviewId",
+            "articleId",
+            "articleModelId",
+            "language",
+            "title",
+            "description",
+            "created",
+            "rating",
+            "helpfulCount",
+            "unhelpfulCount"
+         ]
+      },
+      "Article-Reviews": {
+         "type": "object",
+         "description": "Zalando API Paged Article Reviews Schema",
+         "allOf": [
+            {
+               "$ref": "#/definitions/Page"
+            },
+            {
+               "properties": {
+                  "content": {
+                     "type": "array",
+                     "items": {
+                        "$ref": "#/definitions/Article-Review"
+                     },
+                     "minItems": 0
+                  }
+               }
+            }
+         ]
+      },
+      "Article-Reviews-Summaries": {
+         "type": "object",
+         "description": "Zalando API Paged Article Reviews Summaries Schema",
+         "allOf": [
+            {
+               "$ref": "#/definitions/Page"
+            },
+            {
+               "properties": {
+                  "content": {
+                     "type": "array",
+                     "items": {
+                        "$ref": "#/definitions/Article-Reviews-Summary"
+                     },
+                     "minItems": 0
+                  }
+               }
+            }
+         ]
+      },
+      "Article-Reviews-Summary": {
+         "type": "object",
+         "description": "Zalando API Article Reviews Summary Schema",
+         "properties": {
+            "articleModelId": {
+               "type": "string"
+            },
+            "averageStarRating": {
+               "type": "number",
+               "description": "average star rating of the article"
+            },
+            "numberOfUserReviews": {
+               "type": "integer",
+               "description": "number of user reviews of the article"
+            },
+            "numberOfUserRecommendations": {
+               "type": "integer",
+               "description": "number of users recommended to the article"
+            },
+            "numberOfUserPositiveRecommendations": {
+               "type": "integer",
+               "description": "number of positive recommendations to the article"
+            },
+            "starRatingDistribution": {
+               "type": "object",
+               "description": "start rating distribution of the article",
+               "properties": {
+                  "1": {
+                     "type": "integer"
+                  },
+                  "2": {
+                     "type": "integer"
+                  },
+                  "3": {
+                     "type": "integer"
+                  },
+                  "4": {
+                     "type": "integer"
+                  },
+                  "5": {
+                     "type": "integer"
+                  }
+               },
+               "required": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5"
+               ]
+            },
+            "articleSizeRatings": {
+               "type": "object",
+               "description": "size rating of the article",
+               "properties": {
+                  "OVERALL": {
+                     "type": "number"
+                  },
+                  "CHEST": {
+                     "type": "number"
+                  },
+                  "SLEEVES": {
+                     "type": "number"
+                  },
+                  "SHOULDERS": {
+                     "type": "number"
+                  },
+                  "LENGTH": {
+                     "type": "number"
+                  },
+                  "LEG_FIT": {
+                     "type": "number"
+                  },
+                  "SHOE_WIDTH": {
+                     "type": "number"
+                  },
+                  "BOOTLEG_WIDTH": {
+                     "type": "number"
+                  },
+                  "HIPS_OR_REAR": {
+                     "type": "number"
+                  },
+                  "CUP_SIZE": {
+                     "type": "number"
+                  },
+                  "CHEST_GIRTH": {
+                     "type": "number"
+                  },
+                  "COLLAR_SIZE": {
+                     "type": "number"
+                  }
+               }
+            }
+         },
+         "required": [
+            "articleModelId",
+            "averageStarRating",
+            "numberOfUserReviews",
+            "numberOfUserRecommendations",
+            "numberOfUserPositiveRecommendations",
+            "starRatingDistribution"
+         ]
+      },
+      "Article-Units": {
+         "description": "Zalando API Article Units Schema",
+         "type": "array",
+         "items": {
+            "$ref": "#/definitions/Article-Unit"
+         },
+         "minItems": 1
+      },
+      "Article-Unit": {
+         "type": "object",
+         "description": "Zalando API Article Unit Schema",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "article id (sku)"
+            },
+            "size": {
+               "type": "string",
+               "description": "article size"
+            },
+            "price": {
+               "$ref": "#/definitions/Article-Price"
+            },
+            "originalPrice": {
+               "$ref": "#/definitions/Article-Price"
+            },
+            "available": {
+               "type": "boolean",
+               "description": "availability of the article"
+            },
+            "stock": {
+               "type": "integer",
+               "description": "stock of the article"
+            },
+            "partnerId": {
+               "type": "string",
+               "description": "partner id (vendor id) of the article"
+            }
+         },
+         "required": [
+            "id",
+            "size",
+            "price",
+            "originalPrice",
+            "available",
+            "stock"
+         ]
+      },
+      "Domain": {
+         "type": "object",
+         "description": "Zalando API Domain Schema",
+         "properties": {
+            "languageCode": {
+               "type": "string",
+               "description": "domain language"
+            },
+            "countryCode": {
+               "type": "string",
+               "description": "domain country code"
+            },
+            "currencyCode": {
+               "type": "string",
+               "description": "domain currency code"
+            },
+            "taxRate": {
+               "type": "number",
+               "minimum": 0,
+               "maximum": 1,
+               "exclusiveMinimum": true,
+               "exclusiveMaximum": true,
+               "description": "domain tax rate"
+            },
+            "rootCategoryKey": {
+               "type": "string",
+               "description": "domain root category"
+            },
+            "shopUrl": {
+               "type": "string",
+               "description": "domain specific url"
+            }
+         },
+         "required": [
+            "languageCode",
+            "countryCode",
+            "currencyCode",
+            "taxRate",
+            "rootCategoryKey",
+            "shopUrl"
+         ]
+      },
+      "Brands": {
+         "type": "object",
+         "description": "Zalando API Paged Brands Schema",
+         "allOf": [
+            {
+               "$ref": "#/definitions/Page"
+            },
+            {
+               "properties": {
+                  "content": {
+                     "type": "array",
+                     "items": {
+                        "$ref": "#/definitions/Brand"
+                     },
+                     "minItems": 0
+                  }
+               }
+            }
+         ]
+      },
+      "Brand": {
+         "type": "object",
+         "description": "Zalando API Brand Schema",
+         "properties": {
+            "key": {
+               "type": "string",
+               "description": "The unique key for a brand"
+            },
+            "name": {
+               "type": "string",
+               "description": "Name of the brand"
+            },
+            "shopUrl": {
+               "type": "string",
+               "format": "uri",
+               "description": "The url of the brand within the Zalando web shop"
+            },
+            "logoUrl": {
+               "type": "string",
+               "format": "uri",
+               "description": "The url of the brand logo within the Zalando web shop"
+            },
+            "logoLargeUrl": {
+               "type": "string",
+               "format": "uri",
+               "description": "The url of the large brand logo within the Zalando web shop"
+            },
+            "brandFamily": {
+               "$ref": "#/definitions/BrandFamily"
+            }
+         },
+         "required": [
+            "key",
+            "name",
+            "shopUrl"
+         ]
+      },
+      "BrandFamily": {
+         "type": "object",
+         "description": "Zalando API BrandFamily Schema",
+         "properties": {
+            "key": {
+               "type": "string",
+               "description": "The unique key for a brandFamily"
+            },
+            "name": {
+               "type": "string",
+               "description": "Name of the brandFamily"
+            },
+            "shopUrl": {
+               "type": "string",
+               "format": "uri",
+               "description": "The url of the brandFamily within the Zalando web shop"
+            }
+         },
+         "required": [
+            "key",
+            "name",
+            "shopUrl"
+         ]
+      },
+      "Page": {
+         "type": "object",
+         "description": "wrapper object for paged responses",
+         "discriminator": "content",
+         "properties": {
+            "totalElements": {
+               "type": "integer",
+               "description": "total elements in the response"
+            },
+            "totalPages": {
+               "type": "integer",
+               "description": "total number of pages in the response"
+            },
+            "page": {
+               "type": "integer",
+               "description": "page number"
+            },
+            "size": {
+               "type": "integer",
+               "description": "total number of elements in a page"
+            },
+            "content": {
+               "type": "array",
+               "description": "page content",
+               "items": {},
+               "minItems": 0
+            }
+         },
+         "required": [
+            "totalElements",
+            "totalPages",
+            "page",
+            "size",
+            "content"
+         ]
+      },
+      "Categories": {
+         "type": "object",
+         "description": "Zalando API Paged Categories Schema",
+         "allOf": [
+            {
+               "$ref": "#/definitions/Page"
+            },
+            {
+               "properties": {
+                  "content": {
+                     "type": "array",
+                     "items": {
+                        "$ref": "#/definitions/Category"
+                     },
+                     "minItems": 0
+                  }
+               }
+            }
+         ]
+      },
+      "Category": {
+         "type": "object",
+         "description": "Zalando API Category Schema",
+         "properties": {
+            "key": {
+               "type": "string",
+               "description": "The unique key for a category"
+            },
+            "cid": {
+               "type": "integer",
+               "description": "The numeric ID for a category."
+            },
+            "name": {
+               "type": "string",
+               "description": "Name of the category"
+            },
+            "parentKey": {
+               "type": "string",
+               "description": "The key of the parent category"
+            },
+            "childKeys": {
+               "type": "array",
+               "items": {
+                  "type": "string"
+               },
+               "minItems": 0,
+               "description": "The list of keys of the child categories"
+            },
+            "type": {
+               "type": "string",
+               "description": "The type of the category."
+            },
+            "outlet": {
+               "type": "boolean",
+               "description": "Containing articles are from last seasons"
+            },
+            "hidden": {
+               "type": "boolean",
+               "description": "The category is hidden and not shown on the Zalando web shop"
+            },
+            "targetGroup": {
+               "type": "string",
+               "enum": [
+                  "ALL",
+                  "WOMEN",
+                  "MEN",
+                  "KIDS"
+               ],
+               "description": "The target group of the articles from this category"
+            },
+            "suggestedFilters": {
+               "type": "array",
+               "items": {
+                  "type": "string"
+               },
+               "minItems": 1,
+               "description": "list of filter names that are reasonable to use within this category"
+            }
+         },
+         "required": [
+            "key",
+            "name",
+            "childKeys",
+            "targetGroup",
+            "suggestedFilters"
+         ]
+      },
+      "Recommendations": {
+         "description": "Zalando API Recommendations Schema",
+         "type": "array",
+         "items": {
+            "$ref": "#/definitions/Recommendations-Article"
+         },
+         "minItems": 0
+      },
+      "Recommendations-Article": {
+         "type": "object",
+         "description": "Zalando API Recommendation Article Schema",
+         "properties": {
+            "id": {
+               "type": "string"
+            },
+            "modelId": {
+               "type": "string"
+            },
+            "name": {
+               "type": "string"
+            },
+            "shopUrl": {
+               "type": "string"
+            },
+            "media": {
+               "$ref": "#/definitions/Article-Media"
+            }
+         },
+         "required": [
+            "id",
+            "modelId",
+            "name",
+            "shopUrl",
+            "media"
+         ]
+      },
+      "Filters": {
+         "type": "array",
+         "items": {
+            "$ref": "#/definitions/Filter"
+         },
+         "minItems": 0
+      },
+      "Filter": {
+         "type": "object",
+         "description": "Zalando API Filter Schema",
+         "properties": {
+            "name": {
+               "type": "string",
+               "description": "The unique name for a filter"
+            },
+            "multiValue": {
+               "type": "boolean",
+               "description": "can this filter be used multiple times with different values in one search request"
+            },
+            "type": {
+               "type": "string",
+               "enum": [
+                  "SKU",
+                  "KEY",
+                  "ENUM",
+                  "STRING",
+                  "RANGE"
+               ],
+               "description": "filter enum types"
+            },
+            "values": {
+               "type": "array",
+               "items": {
+                  "$ref": "#/definitions/Filter-Value"
+               },
+               "minItems": 0,
+               "description": "only if type is 'enum' this list contains all possible filter values"
+            }
+         },
+         "required": [
+            "name",
+            "multiValue",
+            "type",
+            "values"
+         ]
+      },
+      "Filter-Value": {
+         "type": "object",
+         "description": "Zalando API FilterValue Schema",
+         "properties": {
+            "key": {
+               "type": "string",
+               "description": "The key for a filterValue. Only unique within one filter"
+            },
+            "displayName": {
+               "type": "string",
+               "description": "translated display name"
+            }
+         },
+         "required": [
+            "key",
+            "displayName"
+         ]
+      },
+      "Facets": {
+         "description": "Zalando API Facets Schema",
+         "type": "array",
+         "items": {
+            "$ref": "#/definitions/Facet"
+         },
+         "minItems": 0
+      },
+      "Facet": {
+         "type": "object",
+         "description": "Zalando API Facet Schema",
+         "properties": {
+            "filter": {
+               "type": "string"
+            },
+            "facets": {
+               "type": "array",
+               "items": {
+                  "$ref": "#/definitions/Facet-Value"
+               },
+               "minItems": 1,
+               "description": "list of the calculated article counts for each filter value"
+            }
+         },
+         "required": [
+            "filter",
+            "facets"
+         ]
+      },
+      "Facet-Value": {
+         "type": "object",
+         "description": "Zalando API FacetValue Schema",
+         "properties": {
+            "key": {
+               "type": "string"
+            },
+            "displayName": {
+               "type": "string"
+            },
+            "count": {
+               "type": "integer",
+               "description": "number of articles matching this filter value"
+            }
+         },
+         "required": [
+            "key",
+            "displayName",
+            "count"
+         ]
+      },
+      "ErrorMessage": {
+         "type": "object",
+         "properties": {
+            "status": {
+               "type": "integer"
+            },
+            "message": {
+               "type": "string"
+            },
+            "errors": {
+               "type": "array",
+               "items": {
+                  "$ref": "#/definitions/ErrorDetail"
+               }
+            }
+         },
+         "required": [
+            "status",
+            "message"
+         ]
+      },
+      "ErrorDetail": {
+         "type": "object",
+         "properties": {
+            "key": {
+               "type": "string"
+            },
+            "value": {
+               "type": "string"
+            },
+            "name": {
+               "type": "string"
+            },
+            "invalidName": {
+               "type": "boolean"
+            },
+            "invalidValues": {
+               "type": "array",
+               "items": {
+                  "type": "string"
+               }
+            }
+         }
+      }
+   },
+   "parameters": {
+      "acceptLanguage": {
+         "name": "Accept-Language",
+         "in": "header",
+         "description": "Specify which Shop to use.\n\nA standard `Accept-Language` header which specifies the shop that should be used. E.g. `de-DE` will use the German\nshop (as does [https://www.zalando.de](https://www/zalando.de) and `de-AT` will use the Austrian one.\n\nThe shop choosen will e.g. define the currency used for prices as well as the language for product names and\ndescriptions. Furthermore it will impact which articles are available as they might differ between countries.",
+         "required": false,
+         "type": "string",
+         "enum": [
+            "da-DK",
+            "de-AT",
+            "de-CH",
+            "de-DE",
+            "en-GB",
+            "es-ES",
+            "fi-FI",
+            "fr-BE",
+            "fr-CH",
+            "fr-FR",
+            "it-IT",
+            "nl-BE",
+            "nl-NL",
+            "no-NO",
+            "pl-PL",
+            "sv-SE"
+         ]
+      },
+      "activationDate": {
+         "name": "activationDate",
+         "in": "query",
+         "description": "period or time the articles are activated for selling in the shop",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "thisWeek",
+               "lastWeek",
+               "lastMonth"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "ageGroup": {
+         "name": "ageGroup",
+         "in": "query",
+         "description": "filters by age group (eg: kids)",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "babies",
+               "kids",
+               "teen",
+               "adult"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "articleId": {
+         "name": "articleId",
+         "in": "query",
+         "description": "The `articleIds` to use use for filtering.\n\nOne or more `articleIds` might be used as a filter criteria. Submit multiple `articleId` request parameters for\nmore than one to be used. They will be treated as `OR` criteria.",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string"
+         },
+         "collectionFormat": "multi"
+      },
+      "articleModelId": {
+         "name": "articleModelId",
+         "in": "query",
+         "description": "filters by article ModelId",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string"
+         },
+         "collectionFormat": "multi"
+      },
+      "articleUnitId": {
+         "name": "articleUnitId",
+         "in": "query",
+         "description": "filters by article's unit id",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string"
+         },
+         "collectionFormat": "multi"
+      },
+      "articleReviewSort": {
+         "name": "sort",
+         "type": "string",
+         "enum": [
+            "newest",
+            "best",
+            "worst",
+            "most_helpful"
+         ],
+         "default": "newest",
+         "in": "query",
+         "required": false,
+         "description": "articles are sorted on reviews provided by customers (eg: best)"
+      },
+      "assortmentArea": {
+         "name": "assortmentArea",
+         "in": "query",
+         "description": "filters by classification of articles (eg: maternity) ",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "standard",
+               "maternity",
+               "plusSize",
+               "petite"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "brand": {
+         "name": "brand",
+         "in": "query",
+         "description": "filters by brand key given by user (eg: SA5)",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string"
+         },
+         "collectionFormat": "multi"
+      },
+      "brandfamily": {
+         "name": "brandfamily",
+         "in": "query",
+         "description": "filters by brand family key (eg: nike) ",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string"
+         },
+         "collectionFormat": "multi"
+      },
+      "category": {
+         "name": "category",
+         "in": "query",
+         "description": "filters by category (eg: Socks, Rain Coats)",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string"
+         },
+         "collectionFormat": "multi"
+      },
+      "color": {
+         "name": "color",
+         "in": "query",
+         "description": "filters by color (eg: red, blue)",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "black",
+               "brown",
+               "beige",
+               "gray",
+               "white",
+               "blue",
+               "petrol",
+               "turquoise",
+               "green",
+               "olive",
+               "yellow",
+               "orange",
+               "red",
+               "pink",
+               "purple",
+               "gold",
+               "silver",
+               "multicolored"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "den": {
+         "name": "den",
+         "in": "query",
+         "description": "filters by den ",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "den15",
+               "den20",
+               "den40",
+               "den60",
+               "den80",
+               "den100",
+               "den200",
+               "den120",
+               "den12",
+               "den50"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "fields": {
+         "name": "fields",
+         "in": "query",
+         "description": "Comma separated list of fields that should be returned. Fields of subobjects are specified with dots as separator. Fields of objects within lists are specified in the same way.\n\nExample: id,name,brand.key,brand.name, units.id,units.size,units.price.formatted",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string"
+         },
+         "collectionFormat": "multi"
+      },
+      "filling": {
+         "name": "filling",
+         "in": "query",
+         "description": "filters by different kinds of garment filling materials (eg: satin, wolle)",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "angora",
+               "baumwolle",
+               "daunen",
+               "fell",
+               "fleece",
+               "frottee",
+               "kaschmir",
+               "lammfell",
+               "leder",
+               "lederimitat",
+               "merinowolle",
+               "microfaser",
+               "mohair",
+               "satin",
+               "schurwolle",
+               "seide",
+               "sonstige",
+               "textil",
+               "warm",
+               "wolle"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "fullText": {
+         "name": "fullText",
+         "in": "query",
+         "description": "filters by text (eg: search by 'as' gives result with articles of brand Sass)",
+         "required": false,
+         "type": "string"
+      },
+      "gender": {
+         "name": "gender",
+         "in": "query",
+         "description": "filters by gender",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "male",
+               "female"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "heelForm": {
+         "name": "heelForm",
+         "in": "query",
+         "description": "filters by heel form (eg: flat)",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "block",
+               "flat",
+               "wedge",
+               "penny",
+               "funnel",
+               "plateau",
+               "plateauBoots",
+               "wedgeHidden",
+               "plateauHidden",
+               "plateauHeels"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "heelHeight": {
+         "name": "heelHeight",
+         "in": "query",
+         "description": "filters by height of the heel size or length (eg: xs)",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "xs",
+               "s",
+               "m"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "length": {
+         "name": "length",
+         "in": "query",
+         "description": "filters by garments length (eg: 3/4 length, knee-length)",
+         "required": false,
+         "type": "string"
+      },
+      "minStarRating": {
+         "name": "minStarRating",
+         "type": "string",
+         "in": "query",
+         "required": false,
+         "description": "To get reviews with minimum star rating."
+      },
+      "maxStarRating": {
+         "name": "maxStarRating",
+         "type": "string",
+         "in": "query",
+         "required": false,
+         "description": "To get reviews with maximum star rating."
+      },
+      "occasion": {
+         "name": "occasion",
+         "in": "query",
+         "description": "filters by type of occasion (eg: party, business)",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "business",
+               "octoberFest",
+               "loungeWear",
+               "evening",
+               "party",
+               "leisure"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "pattern": {
+         "name": "pattern",
+         "in": "query",
+         "description": "filters by pattern on the garments (eg: animal print, plain)",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "animalPrint",
+               "checkered",
+               "colored",
+               "floral",
+               "polkaDot",
+               "striped",
+               "paisley",
+               "plain",
+               "print",
+               "burnout",
+               "herringBone",
+               "camouflage",
+               "flecked",
+               "pinstripe",
+               "gradient",
+               "photoPrint"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "price": {
+         "name": "price",
+         "in": "query",
+         "description": "filters all articles in price range (eg: 9-90)",
+         "required": false,
+         "type": "string"
+      },
+      "sale": {
+         "name": "sale",
+         "in": "query",
+         "description": "filters discounted articles marked as sale",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "sale"
+            ]
+         }
+      },
+      "season": {
+         "name": "season",
+         "in": "query",
+         "description": "filters by season (Autumn/Winter or Spring/Summer)",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "winter",
+               "summer"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "shaftHeight": {
+         "name": "shaftHeight",
+         "in": "query",
+         "description": "filters by shaft height (eg: s, xs)",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "xs",
+               "s",
+               "m",
+               "l"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "shaftWidth": {
+         "name": "shaftWidth",
+         "in": "query",
+         "description": "filters by shaft width (eg: s, l)",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "s",
+               "m",
+               "l"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "shirtCollar": {
+         "name": "shirtCollar",
+         "in": "query",
+         "description": "filters by shirt collar styles (eg: low V neck, lined collar)",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "lapelCollar",
+               "mandarinCollar",
+               "hood",
+               "poloNeck",
+               "poloShirt",
+               "cowlNeck",
+               "roundNeck",
+               "scarfCollar",
+               "boatNeck",
+               "vNeck",
+               "buttonDown",
+               "turnDownCollar",
+               "highCollar",
+               "linedCollar",
+               "shirtCollar",
+               "cutawayCollar",
+               "doubleCollar",
+               "peterPanCollar",
+               "kentCollar",
+               "cupShapedCollar",
+               "contrastCollar",
+               "maoCollar",
+               "wingCollar",
+               "tabCollar",
+               "volantCollar",
+               "shawlCollar",
+               "envelope",
+               "lowVNeck",
+               "cacheCeour",
+               "lowRoundNeck",
+               "backless",
+               "henley",
+               "squareNeck",
+               "offTheShoulder"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "shoeFastener": {
+         "name": "shoeFastener",
+         "in": "query",
+         "description": "filters by shoe fastener types (eg: buckle, lacing)",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "buckle",
+               "belt",
+               "lacing",
+               "open",
+               "zipper",
+               "velcro"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "shoeToecap": {
+         "name": "shoeToecap",
+         "in": "query",
+         "description": "filters by shoe toe cap variants (eg: pointed, square)",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "round",
+               "pointed",
+               "open",
+               "square"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "shopArea": {
+         "name": "shopArea",
+         "in": "query",
+         "description": "filters by classification of articles",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "shop",
+               "sale"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "size": {
+         "name": "size",
+         "in": "query",
+         "description": "filters by size",
+         "required": false,
+         "type": "string"
+      },
+      "sports": {
+         "name": "sports",
+         "in": "query",
+         "description": "filters by different sport activities (eg: football)",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "outdoor",
+               "skiSnow",
+               "running",
+               "training",
+               "football",
+               "handball",
+               "basketball",
+               "volleyball",
+               "golf",
+               "tennis",
+               "beach",
+               "skate",
+               "riding",
+               "cycling",
+               "sailing",
+               "badminton",
+               "dancing",
+               "snowboard",
+               "swimming"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "sort": {
+         "name": "sort",
+         "in": "query",
+         "description": "sorting order (eg: popularity)",
+         "type": "string",
+         "enum": [
+            "popularity",
+            "activationdate",
+            "pricedesc",
+            "priceasc",
+            "sale"
+         ],
+         "required": false
+      },
+      "technology": {
+         "name": "technology",
+         "in": "query",
+         "description": "filters by technology used to produce the articles",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "clima365",
+               "climacool",
+               "climalite",
+               "climaproof",
+               "climawarm",
+               "driFit",
+               "flywire",
+               "formotion",
+               "omniHeat",
+               "polartec",
+               "primaloft",
+               "staywarm",
+               "techfit",
+               "thinsulate",
+               "venturi",
+               "h2no",
+               "dermizax",
+               "performanceShell",
+               "softShell",
+               "windstopper",
+               "proShell",
+               "hydratic",
+               "pacliteShell",
+               "activeShell",
+               "goreTex",
+               "hyvent",
+               "texapore",
+               "precip"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "trouserRise": {
+         "name": "trouserRise",
+         "in": "query",
+         "description": "filters by trouser rise",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "high",
+               "medium",
+               "low"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "upperMaterial": {
+         "name": "upperMaterial",
+         "in": "query",
+         "description": "filters by different type of upper material used on garments (eg: lace)",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "batiste",
+               "caoutchouc",
+               "cashmere",
+               "damask",
+               "down",
+               "feathers",
+               "felt",
+               "flanelette",
+               "flannel",
+               "fleece",
+               "imitationLeather",
+               "jacquard",
+               "jersey",
+               "leather",
+               "linen",
+               "linon",
+               "mesh",
+               "microfiber",
+               "mohair",
+               "other",
+               "percale",
+               "polyester",
+               "renforce",
+               "satin",
+               "seersucker",
+               "silk",
+               "synthetic",
+               "textile",
+               "towelling",
+               "varnish",
+               "velours",
+               "viscose",
+               "wool",
+               "cord",
+               "denim",
+               "rib",
+               "braided",
+               "crocheted",
+               "hardshell",
+               "softshell",
+               "lace",
+               "sweat"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "volume": {
+         "name": "volume",
+         "in": "query",
+         "description": "filters by volume",
+         "required": false,
+         "type": "array",
+         "items": {
+            "type": "string",
+            "enum": [
+               "smallest",
+               "small",
+               "medium",
+               "large",
+               "largest"
+            ]
+         },
+         "collectionFormat": "multi"
+      },
+      "page": {
+         "name": "page",
+         "in": "query",
+         "description": "to request with required page number or pagination",
+         "required": false,
+         "type": "string"
+      },
+      "pageSize": {
+         "name": "pageSize",
+         "in": "query",
+         "description": "to request with required page size in a page",
+         "required": false,
+         "type": "string"
+      }
+   }
+}
